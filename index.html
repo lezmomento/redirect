@@ -3,20 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Redirecting...</title>
-  <script>
-    window.onload = function () {
-      // Try to open in a new tab
-      const newTab = window.open("http://147.185.221.26:47071/", "_blank");
-      
-      // Optional: alert the user if the tab was blocked
-      if (!newTab) {
-        alert("Please allow popups for this page to open the new tab.");
-      }
-    };
-  </script>
 </head>
 <body>
   <h1>Redirecting you to Dynmap...</h1>
-  <p>If nothing happens, <a href="http://147.185.221.26:47071/" target="_blank">click here</a>.</p>
+  <p>If you are not redirected automatically, <a href="http://147.185.221.26:47071/" target="_blank" id="redirectLink">click here</a> to visit the map.</p>
+
+  <script>
+    // You can also use a button that triggers the action on click
+    document.getElementById('redirectLink').addEventListener('click', function() {
+      window.open('http://147.185.221.26:47071/', '_blank');
+    });
+  </script>
 </body>
 </html>
