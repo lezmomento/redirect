@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="5;url=http://147.185.221.26:47071/">
   <script>
-    // Try to open in a new tab
     window.onload = function () {
+      // Try to open in a new tab
       const newTab = window.open("http://147.185.221.26:47071/", "_blank");
-
-      // Optional: close this tab after opening the new one
-      setTimeout(() => {
-        window.close();
-      }, 1000);
+      
+      // Optional: alert the user if the tab was blocked
+      if (!newTab) {
+        alert("Please allow popups for this page to open the new tab.");
+      }
     };
   </script>
 </head>
